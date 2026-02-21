@@ -16,7 +16,7 @@ public class PlayerStats
     public float MaxHealth => baseHealth * healthMod;
     public float MoveSpeed => baseMoveSpeed * speedMod;
     public float AttackSpeed => baseAttSpeed * attackSpeedMod;
-    public float strength => baseStrength * strengthMod;
+    public float Strength => baseStrength * strengthMod;
 
     public void AddHealthPercent(float amount) => healthMod += amount;
     public void AddSpeedPercent(float amount) => speedMod += amount;
