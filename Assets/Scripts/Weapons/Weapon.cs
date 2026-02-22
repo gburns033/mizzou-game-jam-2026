@@ -53,9 +53,9 @@ public class Weapon : MonoBehaviour
 
     public void TryAttack()
     {
-        if (Time.time >= lastAttackTime + attackCooldown)
+        if (Time.deltaTime >= lastAttackTime + attackCooldown)
         {
-            lastAttackTime = Time.time;
+            lastAttackTime = Time.deltaTime;
             Attack();
         }
     }

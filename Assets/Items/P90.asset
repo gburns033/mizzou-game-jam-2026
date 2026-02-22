@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: P90
   icon: {fileID: 0}
-  prefab: {fileID: 8924646168781609106, guid: 0de945594f48b9b46b63b36c27254531, type: 3}
+  prefab: {fileID: 5410666408287866476, guid: 8b8a334234c4347e9af301b033ae6dc2, type: 3}
   value: 0

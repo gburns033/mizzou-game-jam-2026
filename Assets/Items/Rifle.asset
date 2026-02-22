@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Rifle
   icon: {fileID: 0}
-  prefab: {fileID: 8924646168781609106, guid: 8da2d4aeba89d4049b6212c8e55186fb, type: 3}
+  prefab: {fileID: 5410666408287866476, guid: fed2b3ec9608341e98422d27cdd64499, type: 3}
   value: 0

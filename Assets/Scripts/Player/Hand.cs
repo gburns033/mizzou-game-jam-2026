@@ -34,6 +34,7 @@ public class Hand : MonoBehaviour
         if (heldItem != null)
         {
             Grab(heldItem);
+            Equip(0);
         }
     }
 

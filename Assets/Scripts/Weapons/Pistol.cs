@@ -15,6 +15,8 @@ public class Pistol : Gun
 
     protected override void Attack()
     {
+
+
         if (isReloading) { Debug.Log("Reloading..."); return; }
 
         if (currentAmmo <= 0)
