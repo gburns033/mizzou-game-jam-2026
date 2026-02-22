@@ -143,6 +143,15 @@ MonoBehaviour:
   damagePopupOffset: {x: 0, y: 0.5, z: 0}
   currentHealth: 0
   isFrozen: 0
+  hurtRadius: 0.45
+  playerHurtMask:
+    serializedVersion: 2
+    m_Bits: 64
+  hurtDamageCooldown: 0.5
+  useStatsAttackDamage: 1
+  hurtDamageOverride: 10
+  hurtCenter: {fileID: 0}
+  debugHurt: 0
 --- !u!114 &8075093276561383805
 MonoBehaviour:
   m_ObjectHideFlags: 0
