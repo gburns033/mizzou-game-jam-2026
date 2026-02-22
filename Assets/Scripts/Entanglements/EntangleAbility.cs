@@ -18,7 +18,9 @@ namespace Game.Entanglement
 
         private void Awake()
         {
-            player = GetComponent<PlayerController>();
+            player = GetComponentInParent<PlayerController>();
+            if (player == null) player = GetComponentInChildren<PlayerController>(true);
+            
             if (debugLogs)
                 Debug.Log($"[EntangleAbility] Awake on {name}. PlayerController found? {player != null}", this);
         }
