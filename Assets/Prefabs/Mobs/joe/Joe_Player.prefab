@@ -287,6 +287,8 @@ GameObject:
   - component: {fileID: 5254559363191231680}
   - component: {fileID: 4084810923005118370}
   - component: {fileID: 9162766467977274879}
+  - component: {fileID: 8031144777937582003}
+  - component: {fileID: 6912066292719754663}
   m_Layer: 0
   m_Name: Joe_Player
   m_TagString: Player
@@ -363,5 +365,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded02b434afccfd42b210d807dc976a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
   animator: {fileID: 3737846980477538360}
+--- !u!114 &8031144777937582003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612971968222705317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571a253a7bf87a24e9c884643968f6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  stats:
+    baseHealth: 100
+    baseMoveSpeed: 5
+    baseAttSpeed: 1
+    baseStrength: 10
+--- !u!114 &6912066292719754663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612971968222705317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9446b151f9c77a741bb725d1afd81b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFlip

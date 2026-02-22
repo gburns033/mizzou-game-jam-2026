@@ -29,5 +29,21 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
+        
+        FlipTowardMouse();
+    }
+
+    void FlipTowardMouse()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(input.MousePosition);
+    
+        if (mousePos.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); 
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1); 
+        }
     }
 }
