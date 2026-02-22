@@ -31,9 +31,24 @@ public class Weapon : MonoBehaviour
         Vector3 mousePos = inputHandler.MousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldMouse = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector3 displacement = weaponTransform.position - worldMouse;
+        Vector3 displacement = worldMouse - weaponTransform.position;
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
-        weaponTransform.rotation = Quaternion.Euler(0f, 0f, angle + offset);
+        weaponTransform.rotation = Quaternion.Euler(0f, 0f, (angle + offset));
+
+        Vector3 scale = Vector3.one;
+
+        if (angle > 90 || angle < -90)
+        {
+            scale.y = -1f;
+            scale.x = -1f;
+        }
+        else
+        {
+            scale.y = 1f;
+            scale.x = 1f;
+        }
+
+        weaponTransform.localScale = scale;
     }
 
     public void TryAttack()

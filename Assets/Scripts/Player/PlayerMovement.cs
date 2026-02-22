@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<InputHandler>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Use the MoveInput from our InputHandler
         float currentSpeed = player.Stats.MoveSpeed;
