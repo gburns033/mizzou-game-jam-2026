@@ -256,6 +256,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &131840491
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +375,21 @@ MonoBehaviour:
   projectileSpeed: 10
   fireRate: 0.1
 --- !u!1001 &670221989
+=======
+--- !u!1001 &1356961191
+>>>>>>> Stashed changes
+=======
+--- !u!1001 &1356961191
+>>>>>>> Stashed changes
+=======
+--- !u!1001 &1356961191
+>>>>>>> Stashed changes
+=======
+--- !u!1001 &1356961191
+>>>>>>> Stashed changes
+=======
+--- !u!1001 &1356961191
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -383,15 +403,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6612971968222705317, guid: 11ba53a9631b04592b088fc97633eaf2, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Joe_Player
       objectReference: {fileID: 0}
     - target: {fileID: 8150917819298316994, guid: 11ba53a9631b04592b088fc97633eaf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21811
+      value: -1.08175
       objectReference: {fileID: 0}
     - target: {fileID: 8150917819298316994, guid: 11ba53a9631b04592b088fc97633eaf2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05232
+      value: 0.96018
       objectReference: {fileID: 0}
     - target: {fileID: 8150917819298316994, guid: 11ba53a9631b04592b088fc97633eaf2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -609,5 +629,25 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 19151291}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 670221989}
   - {fileID: 1981763740}
+=======
+  - {fileID: 1356961191}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 1356961191}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 1356961191}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 1356961191}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 1356961191}
+>>>>>>> Stashed changes

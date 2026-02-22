@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -7044840021722718306}
   - component: {fileID: 2019268248045248551}
   - component: {fileID: -1358731349800706449}
+  - component: {fileID: 1811740780087844908}
   m_Layer: 3
   m_Name: Mob_Medium
   m_TagString: Untagged
@@ -138,7 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Mobs.MobController
   stats: {fileID: 11400000, guid: b4a73f3878d29491b837e1e4b334e289, type: 2}
+  damagePopupPrefab: {fileID: -7383900317868761158, guid: 67a7e45c02baa4f538b54dea4b19c26a, type: 3}
+  damagePopupOffset: {x: 0, y: 0.5, z: 0}
   currentHealth: 0
+  isFrozen: 0
 --- !u!114 &8075093276561383805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,9 +158,7 @@ MonoBehaviour:
   fallbackType: 1
   minPct: 0.05
   maxPct: 0.08
-  variants: 00000000
   lockEffectAfterFirstRoll: 1
-  rerollEachEntangle: 0
 --- !u!58 &2514908243170610987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -230,3 +232,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Mobs.MobBrain
   state: 0
+--- !u!114 &1811740780087844908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399299249442672962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daaf1e392e9bb4a9e822095d8383dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mob
+  baseStats: {fileID: 11400000, guid: b4a73f3878d29491b837e1e4b334e289, type: 2}
+  currentHP: 0
+  maxHP: 0
+  damage: 0
+  moveSpeed: 0

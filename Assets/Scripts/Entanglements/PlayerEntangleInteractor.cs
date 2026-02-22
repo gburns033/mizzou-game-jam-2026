@@ -33,7 +33,8 @@ namespace Game.Entanglement
 
         private void Awake()
         {
-            player = GetComponent<PlayerController>();
+            player = GetComponentInParent<PlayerController>();
+            if (player == null) player = GetComponentInChildren<PlayerController>(true);
 
             if (entangleAbility == null)
                 entangleAbility = GetComponent<EntangleAbility>();
@@ -44,7 +45,8 @@ namespace Game.Entanglement
 
             if (debugLogs)
                 Debug.Log($"[Entangle] Awake on {name}. PlayerController found? {player != null} | EntangleAbility found? {entangleAbility != null}", this);
-        }
+
+            }
 
         private void Update()
         {
@@ -77,11 +79,19 @@ namespace Game.Entanglement
             entangleAbility.TryEntangle(entangle.gameObject);
 
             nextAllowedTime = Time.time + cooldownSeconds;
+
+            Debug.Log($"[Entangle] Key press handled by: {gameObject.name}", this);
         }
 
         private MobEntangle FindClosestEntangleable()
         {
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, entangleRange, mobLayer);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, entangleRange);
+
+            if (debugLogs && hits != null)
+            {
+                for (int i = 0; i < hits.Length; i++)
+                    Debug.Log($"[Entangle] Hit {hits[i].name} layer={hits[i].gameObject.layer}", hits[i]);
+            }
 
             if (debugLogs) Debug.Log($"[Entangle] Overlap hits: {(hits == null ? 0 : hits.Length)}", this);
 

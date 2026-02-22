@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Game.UI;
 
 namespace Game.Mobs
 {
@@ -9,6 +10,10 @@ namespace Game.Mobs
     {
         [Header("Config")]
         public MobStatsSO stats;
+
+        [Header("Damage UI")]
+        public DamagePopup damagePopupPrefab;
+        public Vector3 damagePopupOffset = new Vector3(0f, 0.5f, 0f);
 
         [Header("Runtime")]
         [SerializeField] private float currentHealth;
@@ -107,6 +112,16 @@ namespace Game.Mobs
                 currentHealth = 0f;
                 Die();
             }
+            if (damagePopupPrefab != null)
+                {
+                    var popup = Instantiate(
+                        damagePopupPrefab,
+                        transform.position + damagePopupOffset,
+                        Quaternion.identity
+                    );
+
+                    popup.SetText(Mathf.RoundToInt(amount).ToString());
+                }
         }
 
         private void Die()

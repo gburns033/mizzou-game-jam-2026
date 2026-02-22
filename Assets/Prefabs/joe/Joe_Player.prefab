@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5019731613861897110}
   - component: {fileID: 2395779844435914727}
   - component: {fileID: 3737846980477538360}
+  - component: {fileID: 1747334298906555526}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -131,6 +132,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1747334298906555526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000393791670769016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8eb02273a2439493ba7054d326cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Entanglement.PlayerEntangleInteractor
+  debugLogs: 1
+  entangleKey: 20
+  entangleRange: 2
+  mobLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cooldownSeconds: 0.25
+  entangleAbility: {fileID: 0}
 --- !u!1 &6549253545344234895
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +308,38 @@ GameObject:
   - component: {fileID: 5254559363191231680}
   - component: {fileID: 4084810923005118370}
   - component: {fileID: 9162766467977274879}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Assets/Prefabs/Mobs/joe/Joe_Player.prefab
   - component: {fileID: 8031144777937582003}
   - component: {fileID: 6912066292719754663}
+=======
+  - component: {fileID: 7293279135287171298}
+  - component: {fileID: 1832456473502819802}
+  - component: {fileID: 9147641911664592816}
+>>>>>>> Stashed changes:Assets/Prefabs/joe/Joe_Player.prefab
+=======
+  - component: {fileID: 7293279135287171298}
+  - component: {fileID: 1832456473502819802}
+  - component: {fileID: 9147641911664592816}
+>>>>>>> Stashed changes
+=======
+  - component: {fileID: 7293279135287171298}
+  - component: {fileID: 1832456473502819802}
+  - component: {fileID: 9147641911664592816}
+>>>>>>> Stashed changes
+=======
+  - component: {fileID: 7293279135287171298}
+  - component: {fileID: 1832456473502819802}
+  - component: {fileID: 9147641911664592816}
+>>>>>>> Stashed changes
+=======
+  - component: {fileID: 7293279135287171298}
+  - component: {fileID: 1832456473502819802}
+  - component: {fileID: 9147641911664592816}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Joe_Player
   m_TagString: Player
@@ -366,7 +417,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   animator: {fileID: 3737846980477538360}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Assets/Prefabs/Mobs/joe/Joe_Player.prefab
 --- !u!114 &8031144777937582003
+=======
+--- !u!114 &7293279135287171298
+>>>>>>> Stashed changes:Assets/Prefabs/joe/Joe_Player.prefab
+=======
+--- !u!114 &7293279135287171298
+>>>>>>> Stashed changes
+=======
+--- !u!114 &7293279135287171298
+>>>>>>> Stashed changes
+=======
+--- !u!114 &7293279135287171298
+>>>>>>> Stashed changes
+=======
+--- !u!114 &7293279135287171298
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,7 +454,27 @@ MonoBehaviour:
     baseMoveSpeed: 5
     baseAttSpeed: 1
     baseStrength: 10
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Assets/Prefabs/Mobs/joe/Joe_Player.prefab
 --- !u!114 &6912066292719754663
+=======
+--- !u!114 &1832456473502819802
+>>>>>>> Stashed changes:Assets/Prefabs/joe/Joe_Player.prefab
+=======
+--- !u!114 &1832456473502819802
+>>>>>>> Stashed changes
+=======
+--- !u!114 &1832456473502819802
+>>>>>>> Stashed changes
+=======
+--- !u!114 &1832456473502819802
+>>>>>>> Stashed changes
+=======
+--- !u!114 &1832456473502819802
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,3 +486,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9446b151f9c77a741bb725d1afd81b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFlip
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Assets/Prefabs/Mobs/joe/Joe_Player.prefab
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+--- !u!114 &9147641911664592816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612971968222705317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8eb02273a2439493ba7054d326cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Entanglement.PlayerEntangleInteractor
+  debugLogs: 1
+  entangleKey: 19
+  entangleRange: 2
+  mobLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cooldownSeconds: 0.25
+  entangleAbility: {fileID: 0}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes:Assets/Prefabs/joe/Joe_Player.prefab
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
