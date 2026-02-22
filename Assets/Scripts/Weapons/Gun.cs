@@ -2,28 +2,16 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
-   public Transform shotPoint;
-   public GameObject projectile;
-   public float timeBetweenShots;
-   float nextShotTime;
+    public Transform shotPoint;
+    public GameObject projectile;
+    public float timeBetweenShots;
 
-
-   void Start()
-   {
-       
-   }
-
-   void Update()
+    protected override void Attack()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (projectile != null && shotPoint != null)
         {
-            if(Time.time >= nextShotTime)
-            {
-                nextShotTime = Time.time + timeBetweenShots;
-                Instantiate(projectile, shotPoint.position, shotPoint.rotation);
-            }
+            Instantiate(projectile, shotPoint.position, shotPoint.rotation);
+            Debug.Log("Gun fired!");
         }
     }
-   
-
 }

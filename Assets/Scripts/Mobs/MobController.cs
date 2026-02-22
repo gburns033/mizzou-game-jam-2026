@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Game.Mobs
@@ -12,8 +13,14 @@ namespace Game.Mobs
         [Header("Runtime")]
         [SerializeField] private float currentHealth;
 
+        [Header("Status")]
+        [SerializeField] private bool isFrozen;
+
         private Rigidbody2D rb;
         private Animator animator;
+
+        private Coroutine freezeRoutine;
+        private RigidbodyConstraints2D savedConstraints;
 
         public Rigidbody2D RB => rb;
         public Animator Animator => animator;
@@ -22,6 +29,7 @@ namespace Game.Mobs
         public MobType Type => stats != null ? stats.mobType : MobType.Medium;
 
         public float CurrentHealth => currentHealth;
+        public bool IsFrozen => isFrozen;
 
         private void Awake()
         {
@@ -43,12 +51,52 @@ namespace Game.Mobs
 
         public void SetVelocity(Vector2 velocity)
         {
+            if (isFrozen)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+
             rb.linearVelocity = velocity;
         }
 
         public void Stop()
         {
             rb.linearVelocity = Vector2.zero;
+        }
+
+        /// <summary>
+        /// Hard-freezes the mob for duration seconds (stops any Rigidbody2D movement).
+        /// Calling FreezeFor again restarts the timer.
+        /// </summary>
+        public void FreezeFor(float duration)
+        {
+            if (duration <= 0f) return;
+
+            if (freezeRoutine != null)
+                StopCoroutine(freezeRoutine);
+
+            freezeRoutine = StartCoroutine(FreezeRoutine(duration));
+        }
+
+        private IEnumerator FreezeRoutine(float duration)
+        {
+            isFrozen = true;
+
+            // Save constraints, then hard-freeze everything
+            savedConstraints = rb.constraints;
+
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            yield return new WaitForSeconds(duration);
+
+            // Restore constraints
+            rb.constraints = savedConstraints;
+
+            isFrozen = false;
+            freezeRoutine = null;
         }
 
         public void TakeDamage(float amount)
