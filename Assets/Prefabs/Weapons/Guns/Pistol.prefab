@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4924538159491362868}
   - component: {fileID: 2367822809459333205}
   - component: {fileID: 3964871388392315969}
+  - component: {fileID: 6345475922547899897}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -145,3 +146,21 @@ MonoBehaviour:
   projectileSpeed: 10
   magazineSize: 12
   reloadTime: 1.5
+--- !u!114 &6345475922547899897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410666408287866476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9948812724b444c08aec44b5fb84c105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  damage: 10
+  lifetime: 2
+  playerLayerName: Player
+  handLayerName: Hand
+  bulletLayerName: Bullet
+  logHits: 0
