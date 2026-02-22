@@ -43,6 +43,13 @@ namespace Game.Mobs
 
         private void FixedUpdate()
         {
+            // HARD stop if frozen
+            if (mob.IsFrozen)
+            {
+                mob.Stop();
+                return;
+            }
+
             Vector2 vel = Vector2.zero;
 
             switch (state)
